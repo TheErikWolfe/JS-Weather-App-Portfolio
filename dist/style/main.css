@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great|Scada");
 .container {
-  max-width: 500px;
-  min-width: 350px; }
+  max-width: 600px;
+  min-width: 500px; }
 
 #geoError {
   display: none;
@@ -11,3 +12,19 @@
 
 #output {
   display: none; }
+
+#temp {
+  font-size: 450%; }
+
+#weatherImg {
+  height: auto;
+  width: 60px; }
+
+#temp {
+  display: inline-block; }
+
+#buttonDisplay {
+  display: inline-block; }
+
+.nice-grey {
+  color: #a2a2a2; }

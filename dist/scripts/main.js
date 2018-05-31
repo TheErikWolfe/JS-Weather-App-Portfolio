@@ -12,6 +12,8 @@ var tempK = document.getElementById('temperatureOutputK');
 var tempF = document.getElementById('temperatureOutputF');
 var tempC = document.getElementById('temperatureOutputC');
 var zipInput = document.getElementById('zipInput');
+var windSpeed = document.getElementById('windSpeed');
+var humidity = document.getElementById('humidity');
 
 var geoError = document.getElementById('geoError');
 
@@ -97,6 +99,11 @@ function catchResponse()
 		cityState.innerHTML = response.name;
 		weatherCondition.innerHTML = response.weather[0].main;
 		kelvin = response.main.temp;
+
+		windSpeed.innerHTML = "Wind Speed: " + response.wind.speed + "mph";
+		humidity.innerHTML = "Humidity: " + response.main.humidity + "%";
+
+
 		convertKtoF();
 		displayImg(response.weather[0].id);
 
@@ -113,17 +120,17 @@ function catchResponse()
 // Functions to change Kelvin into celsius or farenheit
 function convertKtoF()
 {
-	temp.innerHTML = Math.round((kelvin * 9/5) - 459.67) + '&deg F';
+	temp.innerHTML = Math.round((kelvin * 9/5) - 459.67) + '&deg';
 }
 
 function convertKtoC()
 {
-	temp.innerHTML = Math.round(kelvin - 273.15) + '&deg C';
+	temp.innerHTML = Math.round(kelvin - 273.15) + '&deg';
 }
 
 function backToK()
 {
-	temp.innerHTML = Math.round(kelvin) + ' K';
+	temp.innerHTML = Math.round(kelvin);
 }
 
 function displayImg(id)

@@ -7,7 +7,7 @@
 	</head>
 
 	<body class="container contain-fluid">
-
+		<button onclick="geoLocationError()" type="button" class="p-1 mt-4 btn btn-link btn-sm">Enter Zip</button>
 		<!-- TODO: Throw proper Errors-->
 		<div id="error">
 			<div class="card mt-3 mb-3 border-dark">
@@ -22,7 +22,7 @@
 
 			<form class="mt-5 mb-5">
 				<div class="row justify-content-center mb-3">
-					<h1>There Was a Problem with location services, please enter a zip code!</h1>
+					<h1>Please Enter Zip Code</h1>
 				</div>
 				<div class="row justify-content-center">
 					<div class="col col-auto">
@@ -37,27 +37,39 @@
 
 
 
-
+		<!-- bg-transparent pt-2 -->
 		<!-- TODO: Get Styling Correct -->
 		<div id="output">
-			<div class="card mt-4">
-				<div class="card-header bg-transparent">
+			<div class="card rounded-0">
+				<div class="bg-transparent pt-2 card-header pb-0 nice-grey">
 					<h4 id="cityState" class="header-h4 mb-0"></h4>
 					<h6 id="dayTime" class="header-h6 mb-0"></h6>
 					<h6 id="weatherCondition" class="header-h6"></h6>
 				</div>
-				<div class="card-body">
-					<div class="row">	
+				<div class="card-body p-0 pt-3">
+				<div class="row">	
+						<!-- <div class="col col-auto border border-secondary">
+							
+						</div> -->
 						<div class="col col-auto">
-							<img id="weatherImg" alt="" src="" class="img-fluid rounded">
+							<img id="weatherImg" alt="" src="" class="img-fluid rounded float-left ml-2 mt-1">
+							<h1 id="temp" class="header-h1 m-0"></h1>
+							<div id="buttonDisplay" class="align-top">
+								<button id="tempF" onclick="convertKtoF()" type="button" class="p-1 btn btn-link btn-sm">F</button>|
+								<button id="tempC" onclick="convertKtoC()" type="button" class="p-0 btn btn-link btn-sm">C</button>
+								|<button id="tempK" onclick="backToK()" type="button" class="p-1 btn btn-link btn-sm">K</button>
+							</div>
 						</div>
-						<div class=" col col-auto">
-							<h1 id="temp" class="header-h1"></h1>
+						<div class="nice-grey p-5 col col-auto text-center">
+
 						</div>
-						<div class="col col-auto">
-							<button id="tempF" onclick="convertKtoF()" type="button" class="btn btn-link btn-sm">F</button>|
-							<button id="tempC" onclick="convertKtoC()" type="button" class="btn btn-link btn-sm">C</button>
-							|<button id="tempK" onclick="backToK()" type="button" class="btn btn-link btn-sm">K</button>
+						<div class="nice-grey col col-sm mt-3 text-left">
+							<div id="windSpeed">
+							Wind Speed,
+							</div>
+							<div id="humidity">
+							Humidity,
+							</div>
 						</div>
 					</div>
 				</div>

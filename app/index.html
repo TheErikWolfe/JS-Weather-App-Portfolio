@@ -7,8 +7,6 @@
 	</head>
 
 	<body class="container contain-fluid">
-		<button onclick="geoLocationError()" type="button" class="p-1 mt-4 btn btn-link btn-sm">Enter Zip</button>
-		<!-- TODO: Throw proper Errors-->
 		<div id="error">
 			<div class="card mt-3 mb-3 border-dark">
 				<div class="card-header bg-danger text-center font-weight-bold border-dark">Error</div>
@@ -22,7 +20,7 @@
 
 			<form class="mt-5 mb-5">
 				<div class="row justify-content-center mb-3">
-					<h1>Please Enter Zip Code</h1>
+					<h3 class="header-h3">Please Enter Zip Code</h3>
 				</div>
 				<div class="row justify-content-center">
 					<div class="col col-auto">
@@ -40,19 +38,19 @@
 		<!-- bg-transparent pt-2 -->
 		<!-- TODO: Get Styling Correct -->
 		<div id="output">
-			<div class="card rounded-0">
+			<div class="card rounded-0 mt-3">
 				<div class="bg-transparent pt-2 card-header pb-0 nice-grey">
 					<h4 id="cityState" class="header-h4 mb-0"></h4>
 					<h6 id="dayTime" class="header-h6 mb-0"></h6>
 					<h6 id="weatherCondition" class="header-h6"></h6>
 				</div>
-				<div class="card-body p-0 pt-3">
-				<div class="row">	
+				<div class="card-body p-0 pt-3 pb-1">
+					<div class="row">	
 						<!-- <div class="col col-auto border border-secondary">
 							
 						</div> -->
-						<div class="col col-auto">
-							<img id="weatherImg" alt="" src="" class="img-fluid rounded float-left ml-2 mt-1">
+						<div class="col col-7">
+							<img id="weatherImg" alt="" src="" class="img-fluid rounded float-left ml-3 mt-1">
 							<h1 id="temp" class="header-h1 m-0"></h1>
 							<div id="buttonDisplay" class="align-top">
 								<button id="tempF" onclick="convertKtoF()" type="button" class="p-1 btn btn-link btn-sm">F</button>|
@@ -60,10 +58,10 @@
 								|<button id="tempK" onclick="backToK()" type="button" class="p-1 btn btn-link btn-sm">K</button>
 							</div>
 						</div>
-						<div class="nice-grey p-5 col col-auto text-center">
+						<!-- <div class="nice-grey p-5 col col-auto text-center">
 
-						</div>
-						<div class="nice-grey col col-sm mt-3 text-left">
+						</div> -->
+						<div class="nice-grey col col-5 mt-3 text-left pl-4">
 							<div id="windSpeed">
 							Wind Speed,
 							</div>
@@ -76,7 +74,7 @@
 			</div>
 		</div>
 		
-
+		<button onclick="geoLocationError()" type="button" class="p-1 mt-2 mb-0 btn btn-link btn-sm">Enter Zip</button>
 		<!-- Maybe a 5 day forcast> -->
 
 

@@ -71,6 +71,7 @@ function httpRequestOnError()
 }
 
 function geoLocationError() {
+	error.style.display = 'none';
 	geoError.style.display = 'block';
 }
 

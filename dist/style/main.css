@@ -1,0 +1,13 @@
+.container {
+  max-width: 500px;
+  min-width: 350px; }
+
+#geoError {
+  display: none;
+  text-align: center; }
+
+#error {
+  display: none; }
+
+#output {
+  display: none; }
